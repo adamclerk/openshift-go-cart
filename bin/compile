@@ -75,8 +75,6 @@ then
     echo " done"
 fi
 
-go get github.com/constabulary/gb/...
-
 if test -f $build/.gopath
 then
     CUSTOM_GOPATH=$OPENSHIFT_HOMEDIR$(get_gopath $build/.gopath) export CUSTOM_GOPATH
@@ -97,7 +95,6 @@ if test -f $build/.gopath
 then
     GOPATH=$CUSTOM_GOPATH:$GOPATH export GOPATH
 fi
-
 go get -tags openshift ./...
 
 mkdir -p $build/bin
