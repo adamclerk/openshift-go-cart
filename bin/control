@@ -27,8 +27,6 @@ function status() {
 
 
 function start() {
-
-
     logf="${OPENSHIFT_GO_LOG_DIR}/go.log"
 
     if is_go_service_running; then
