@@ -27,7 +27,8 @@ function status() {
 
 
 function start() {
-    go get github.com/constabulary/gb/...
+
+
     logf="${OPENSHIFT_GO_LOG_DIR}/go.log"
 
     if is_go_service_running; then
