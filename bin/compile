@@ -59,6 +59,9 @@ fi
 GOROOT=$cache/go-$ver/go export GOROOT
 PATH=$GOROOT/bin:$PATH
 GOPATH=$build/.openshift/g export GOPATH
+
+go get github.com/constabulary/gb/...
+
 if ! (which hg >/dev/null 2>&1 && which bzr >/dev/null 2>&1)
 then
     echo -n "       Installing Virtualenv..."
